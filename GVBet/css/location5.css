@@ -1,0 +1,41 @@
+.location5 {
+	position: absolute;
+	top: 2748px;
+	left: 147px;
+}
+.location5 img {
+	position: absolute;
+}
+.location5 img:nth-child(1) {
+	mix-blend-mode: color-dodge;
+	--opacity: 1;
+	animation: fading2_anim 1s infinite ease-in-out alternate -.6s;
+}
+.location5 img:nth-child(2) {
+	mix-blend-mode: color-dodge;
+	filter: blur(1px);
+	--opacity: .3;
+	animation: fading2_anim 2s infinite ease-in-out alternate -1s,
+		loc5-anim1 2s infinite steps(5);
+
+}
+@keyframes loc5-anim1 {
+	0% {
+		clip-path: polygon(50% 0, 100% 0, 100% 100%, 50% 100%);
+	}
+	100% {
+		clip-path: polygon(0 0, 20% 0, 20% 100%, 0% 100%);
+	}
+}
+.location5 img:nth-child(3) {
+	mix-blend-mode: color-dodge;
+	filter: blur(1px);
+	--opacity: .6;
+	animation: fading2_anim 1s infinite ease-in-out alternate;
+}
+.location5 img:nth-child(4) {
+	mix-blend-mode: color-dodge;
+	filter: blur(1px);
+	--opacity: .6;
+	animation: fading2_anim 1s infinite ease-in-out alternate -.3s;
+}

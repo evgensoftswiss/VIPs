@@ -1,0 +1,42 @@
+.location6 {
+	position: absolute;
+	top: 3480px;
+	left: 1700px;
+}
+.location6 img {
+	position: absolute;
+}
+.location6 img:nth-child(1) {
+	mix-blend-mode: color-dodge;
+	filter: blur(2px);
+	--opacity: .8;
+	animation: fading2_anim 1s infinite ease-in-out alternate;
+}
+.location6 img:nth-child(2) {
+	mix-blend-mode: color-dodge;
+	filter: blur(1px);
+	animation: fading_anim 1s infinite ease-in-out alternate -.6s;
+}
+.location6 img:nth-child(3) {
+	mix-blend-mode: color-dodge;
+	filter: blur(2px);
+	--opacity: .3;
+	animation: fading2_anim 1.5s infinite ease-in-out alternate -.8s;
+}
+.location6 img:nth-child(4),
+.location6 img:nth-child(5),
+.location6 img:nth-child(6)
+ {
+	left: 770px;
+	top: 100px;
+	mix-blend-mode: overlay;
+	filter: blur(1px);
+	--opacity: .5;
+	animation: smoke-anim 1.5s infinite linear;
+}
+.location6 img:nth-child(5) {
+	animation-delay: -.5s;
+}
+.location6 img:nth-child(6) {
+	animation-delay: -1s;
+}

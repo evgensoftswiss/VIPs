@@ -1,0 +1,44 @@
+.location7 {
+	position: absolute;
+	top: 4571px;
+	left: 204px;
+}
+.location7 img {
+	position: absolute;
+}
+.location7 img:nth-child(1) {
+	mix-blend-mode: color-dodge;
+	filter: blur(4px);
+	--opacity: .25;
+	animation: fading2_anim 1.2s infinite ease-in-out alternate;
+}
+.location7 img:nth-child(2) {
+	mix-blend-mode: normal;
+	filter: blur(1px);
+	opacity: .5;
+	animation: fading_anim .5s infinite ease-in-out alternate -.6s;
+}
+.location7 img:nth-child(3) {
+	top: 971px;
+	left: 890px;
+	mix-blend-mode: color-dodge;
+	filter: blur(3px);
+	transform-origin: center bottom;
+	opacity: .4;
+	animation: fountain-anim .6s infinite alternate ease-out,
+	fountain2-anim .15s infinite steps(12);
+	animation-delay: -.3s;
+}
+@keyframes fountain-anim {
+	to {
+		transform: scaleY(1.15);
+	}
+}
+@keyframes fountain2-anim {
+	0% {
+		clip-path: polygon(0 60%, 100% 60%, 100% 80%, 0 80%);
+	}
+	100% {
+		clip-path: polygon(0 0, 100% 0, 100% 13%, 0 15%);
+	}
+}

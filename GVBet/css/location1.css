@@ -1,0 +1,52 @@
+.location1 {
+	position: relative;
+	top: 404px;
+	left: 254px;
+	width: 1155px;
+	height: 973px;
+}
+.location1 img {
+	position: absolute;
+}
+.location1 img:nth-child(1) {
+	mix-blend-mode: color-dodge;
+	opacity: .5;
+	animation: fading_anim 1s infinite ease-in-out alternate;
+}
+.location1 img:nth-child(2) {
+	mix-blend-mode: screen;
+	--opacity: 1;
+	animation: fading2_anim 1s infinite ease-in-out alternate;
+}
+.location1 img:nth-child(3) {
+	mix-blend-mode: color-dodge;
+	animation: loc1-anim1 25s infinite step-end, loc1-anim2 25s infinite -1s;
+}
+@keyframes loc1-anim1 {
+	0% {
+			clip-path: polygon(19% 46%, 27% 48%, 25% 64%, 17% 59%);
+	}
+	10% {
+			clip-path: polygon(71% 43%, 75% 61%, 56% 82%, 56% 69%);
+	}
+	30% {
+			clip-path: polygon(49% 18%, 56% 17%, 57% 82%, 49% 83%);
+	}
+	40% {
+			clip-path: polygon(40% 13%, 46% 15%, 46% 80%, 37% 77%);
+	}
+	70% {
+			clip-path: polygon(31% 53%, 36% 56%, 33% 70%, 27% 68%);
+	}
+	90%, 100% {
+			clip-path: polygon(40% 63%, 42% 64%, 41% 69%, 39% 67%);
+	}
+}
+@keyframes loc1-anim2 {
+	0%, 10%, 30%, 40%, 70% {
+			opacity: 1;
+	}
+	5%, 20%, 35%, 55%, 90%, 100% {
+			opacity: 0;
+	}
+}

@@ -1,0 +1,47 @@
+.location2 {
+	position: absolute;
+	top: 591px;
+	left: 1544px;
+}
+.location2 img {
+	position: absolute;
+}
+.location2 img:nth-child(1) {
+	top: 101px;
+	left: 667px;
+	mix-blend-mode: overlay;
+	filter: blur(3px);
+	opacity: 1;
+	animation: loc2-anim1 .3s infinite linear;
+}
+@keyframes loc2-anim1 {
+	0% {
+			clip-path: polygon(0% 0%, 50% 0%, 50% 50%, 50% 100%, 100% 100%, 50% 50%);
+	}
+	25% {
+			clip-path: polygon(50% 0, 100% 0, 50% 50%, 50% 100%, 0 100%, 50% 50%);
+	}
+	50% {
+			clip-path: polygon(100% 0, 100% 50%, 50% 50%, 0 100%, 0 50%, 50% 50%);
+	}
+	75% {
+			clip-path: polygon(100% 50%, 100% 100%, 50% 50%, 0 50%, 0 0, 50% 50%);
+	}
+	100% {
+			clip-path: polygon(100% 100%, 50% 100%, 50% 50%, 0 0, 50% 0, 50% 50%);
+	}
+}
+.location2 img:nth-child(2) {
+	mix-blend-mode: overlay;
+	--opacity: 1;
+	animation: fading2_anim 3s infinite ease-in-out alternate 1.3s;
+}
+.location2 img:nth-child(3) {
+	mix-blend-mode: screen;
+	animation: fading_anim 2s infinite ease-in-out alternate 1.4s;
+}
+.location2 img:nth-child(4) {
+	mix-blend-mode: screen;
+	--opacity: 1;
+	animation: fading2_anim 2s infinite ease-in-out alternate;
+}
